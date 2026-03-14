@@ -32,7 +32,7 @@ pipeline{
                 docker_push("notes-app","latest","mayur0607")
                 }
             }
-        }
+        
         stage("Depoyment"){
             steps{
                 echo "Deploying the container"
