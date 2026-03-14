@@ -7,13 +7,6 @@ pipeline{
                 cleanWs()
             }
         }
-        stage("hello"){
-            steps{
-
-                hello()
-                
-            }
-        }
         stage("Code"){
             steps{
                 clone("https://github.com/mr-mayur-mane/django-notes-app.git","main")
@@ -33,7 +26,7 @@ pipeline{
                 }
             }
         
-        stage("Depoyment"){
+        stage("Deployment"){
             steps{
                 echo "Deploying the container"
                 sh "docker compose down && docker compose up -d"
