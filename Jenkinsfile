@@ -16,6 +16,14 @@ pipeline{
             }
             
         }
+        stage("Trivy filesystem scan"){
+            steps{
+                trivy_scan()
+            }
+        }
+        stage("OWASP Dependency check"){
+            owasp_dependency()
+        }
         stage("build"){
             steps{
                 
