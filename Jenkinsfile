@@ -32,6 +32,11 @@ pipeline{
             }
         
         }   
+        stage("SonarQube: Code Quality Gates"){
+            steps{
+                sonarqube_code_quality()
+            }
+        }
         stage("build"){
             steps{
                 
