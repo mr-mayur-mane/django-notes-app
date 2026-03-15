@@ -24,7 +24,7 @@ pipeline{
         
         stage("Trivy filesystem scan"){
             steps{
-                trivy_scan()
+                trivy_Scan()
             }
         }
         stage("OWASP Dependency check"){
