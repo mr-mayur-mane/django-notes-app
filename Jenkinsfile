@@ -34,7 +34,7 @@ pipeline{
         }
         stage("SonarQube: Code Analysis"){
             steps{
-                soanrqube_code_analysis("Sonar", "notes-app", "notes-app")
+                sonarqube_code_analysis("Sonar", "notes-app", "notes-app")
             }
         
         }   
