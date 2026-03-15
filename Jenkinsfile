@@ -16,6 +16,12 @@ pipeline{
             }
             
         }
+        stage("hello shared lib"){
+            steps{
+                hello()
+            }
+        }
+        
         stage("Trivy filesystem scan"){
             steps{
                 trivy_scan()
