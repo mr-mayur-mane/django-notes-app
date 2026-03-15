@@ -22,8 +22,16 @@ pipeline{
             }
         }
         stage("OWASP Dependency check"){
-            owasp_dependency()
+            steps{
+                owasp_dependency()
+            }
         }
+        stage("SonarQube: Code Analysis"){
+            steps{
+                soanrqube_code_analysis("Sonar", "notes-app", "notes-app")
+            }
+        
+        }   
         stage("build"){
             steps{
                 
