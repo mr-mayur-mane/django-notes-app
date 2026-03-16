@@ -32,12 +32,12 @@ pipeline{
                 owasp_dependency()
             }
         }
-        stage("SonarQube: Code Analysis"){
-            steps{
-                sonarqube_code_analysis("Sonar", "notes-app", "notes-app")
-            }
-        
-        }   
+        // stage("SonarQube: Code Analysis"){
+        //     steps{
+        //         sonarqube_code_analysis("Sonar", "notes-app", "notes-app")
+        //     }
+        // 
+        // }   
         stage("SonarQube: Code Quality Gates"){
             steps{
                 sonarqube_code_quality()
